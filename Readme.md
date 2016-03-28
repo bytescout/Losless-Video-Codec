@@ -1,5 +1,7 @@
 # ByteScout Lossless Video Codec
 
+Copyright (c) 2016, [ByteScout](https://bytescout.com/)
+
 ## Installation instruction
 
 

@@ -1,0 +1,41 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#include "version_number.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION_NUMBER
+ PRODUCTVERSION VERSION_NUMBER
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e3"
+        BEGIN
+            VALUE "CompanyName", "Bytescout"
+            VALUE "FileDescription", "Bytescout Lossless Codec will help you to compress captured part of your screen or a window's contents without any loss."
+            VALUE "FileVersion", VERSION_STRING
+            VALUE "InternalName", "BytescoutLosslessCodec.dll"
+            VALUE "LegalCopyright", "Copyright (c) Bytescout.  All rights reserved."
+            VALUE "LegalTrademarks", "Bytescout Lossless Codec is a trademark of Bytescout"
+            VALUE "OriginalFilename", "BytescoutLosslessCodec.dll"
+            VALUE "ProductName", "Bytescout Lossless Codec"
+            VALUE "ProductVersion", VERSION_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1251
+    END
+END
+

@@ -1,0 +1,18 @@
+Bytescout Lossless Video Codec: versions history
+-------------------------
+* - bug fixed
++ - implemented feature
+~ - changed
+! - important information
+-------------------------
+
+1.00.189 (8 January 2009)
+* x64 Windows compatibility improved
+* minor bug fixes
+
+
+1.00.172 (17 December 2009)
+* minor bug fixes (including support for non-standard video size)
+
+1.00 (12 December 2009)
++ initial version

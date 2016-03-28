@@ -1,0 +1,65 @@
+; Bytescout Lossless Codec install
+
+[Version]
+Signature="$CHICAGO$"
+Provider=%Bytescout%
+DriverVer=01/01/1980,1.0.259.
+Class=Media
+
+[DefaultInstall]
+CopyFiles=BytescoutLosslessCodec.CopyFile,BytescoutLosslessCodec.INFFile
+UpdateInis=BytescoutLosslessCodec.UpdateIni
+AddReg=BytescoutLosslessCodec.AddReg
+MediaType=SOFTWARE
+
+[DefaultUnInstall]
+DelFiles=BytescoutLosslessCodec.CopyFile,BytescoutLosslessCodec.INFFile
+DelReg=BytescoutLosslessCodec.AddReg
+UpdateInis=BytescoutLosslessCodec.UpdateIni.Del
+
+
+[DestinationDirs]
+BytescoutLosslessCodec.INFFile=12
+
+[BytescoutLosslessCodec.CopyFile]
+BytescoutLosslessCodec.dll
+
+[BytescoutLosslessCodec.INFFile]
+BytescoutLosslessCodec.inf
+
+[BytescoutLosslessCodec.UpdateIni]
+system.ini,drivers32,,"VIDC.BLVC=BytescoutLosslessCodec.dll"
+
+[BytescoutLosslessCodec.UpdateIni.Del]
+system.ini, drivers32, "VIDC.BLVC=BytescoutLosslessCodec.dll"
+
+[BytescoutLosslessCodec.AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\MediaResources\icm\VIDC.BLVC,Description,,%Description%
+HKLM,SYSTEM\CurrentControlSet\Control\MediaResources\icm\VIDC.BLVC,Driver,,"BytescoutLosslessCodec.dll"
+HKLM,SYSTEM\CurrentControlSet\Control\MediaResources\icm\VIDC.BLVC,FriendlyName,,%Description%
+
+HKLM,"%UninstallKey%"
+HKLM,"%UninstallKey%",DisplayName,,"Bytescout Lossless Codec"
+HKLM,"%UninstallKey%",UninstallString,,"rundll32.exe setupapi,InstallHinfSection DefaultUninstall 132 %12%\BytescoutLosslessCodec.inf"
+HKLM,"%UninstallKey%","DsiplayIcon",,"C:\program.exe,0"
+HKLM,"%UninstallKey%","DisplayVersion",,"1.0.259"
+HKLM,"%UninstallKey%","NoModify",0x10001,"0"
+HKLM,"%UninstallKey%","NoRepair",0x10001,"0"
+HKLM,"%UninstallKey%","HelpLink",,"http://www.bytescout.com"
+HKLM,"%UninstallKey%","Publisher",,"Bytescout"
+HKLM,"%UninstallKey%","URLInfoAbout",,"http://www.bytescout.com"
+HKLM,"%UninstallKey%","URLUpdateInfo",,"http://www.bytescout.com"
+
+[DestinationDirs]
+DefaultDestDir=11	; windows\system
+
+[SourceDisksNames]
+1="BytescoutLosslessCodec","",1
+
+[SourceDisksFiles]
+BytescoutLosslessCodec.dll=1
+
+[Strings]
+Description="Bytescout Lossless Codec [BLVC]"
+Bytescout="Bytescout"
+UninstallKey="Software\Microsoft\Windows\CurrentVersion\Uninstall\BytescoutLosslessCodec"
